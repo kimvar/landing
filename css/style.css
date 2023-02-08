@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #4834d4;
+  --secondary-color: #686de0;
+  --body-bg-color: #fefefe;
+  --primary-text-color: #343a40;
+  --secondary-text-color: #6c757d;
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --bold: 700;
+  --semi-bold: 600;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: var(--body-bg-color);
+  color: var(--primary-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--semi-bold);
+  margin-bottom: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+a:hover {
+  color: var(--primary-color);
+}
+
+p {
+  line-height: 1.8;
+}
+
+.btn-link {
+  color: var(--primary-color);
+}
+.btn-link:hover {
+  color: var(--primary-color);
+  opacity: 0.7;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.btn-primary.focus,
+.btn-primary:focus {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  box-shadow: none;
+}
+.btn-primary.disabled,
+.btn-primary:disabled {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  opacity: 0.7;
+}
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color) !important;
+}
+
+.center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.big-title {
+  position: relative;
+  font-size: 26px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.big-title::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 30px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  box-shadow: var(--shadow-lg);
+  background-color: #fff;
+  z-index: 99;
+}
+.header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  margin-right: 70px;
+  height: 70px;
+}
+.header .logo img {
+  height: 100%;
+  padding: 10px 0;
+}
+.header .menu nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header .menu nav ul li {
+  margin-right: 20px;
+}
+.header .menu nav ul li a {
+  font-weight: var(--semi-bold);
+  font-size: 17px;
+}
+.header .login i {
+  margin-right: 5px;
+  color: var(--primary-color);
+}
+.header .login span {
+  font-weight: var(--semi-bold);
+}
+
+.main {
+  margin-top: 70px;
+  padding: 75px 0;
+}
+
+.announcement .items {
+  box-shadow: var(--shadow-lg);
+  border-radius: 10px;
+  padding: 20px 30px;
+  background-color: #fff;
+}
+.announcement .items .legend {
+  margin-bottom: 10px;
+  font-weight: var(--bold);
+  font-size: 20px;
+  color: var(--primary-color);
+}
+.announcement .items .item {
+  padding: 10px 0;
+  border-bottom: 1px dashed #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.announcement .items .item:hover {
+  padding: 10px 15px;
+  margin: 0 -15px;
+  background-color: #f5f5f5;
+}
+.announcement .items .item::after {
+  margin-right: 15px;
+  content: "\f1ea";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 32px;
+  opacity: 0.15;
+  color: #000;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+.announcement .items.help-request .item::after {
+  content: "\f4be";
+}
+
+.announcement .items .item a {
+  overflow: hidden;
+  display: block;
+  flex-grow: 1;
+}
+.announcement .items .item:last-child {
+  border-bottom: none;
+}
+.announcement .items .item .title {
+  margin-bottom: 5px;
+  font-weight: var(--semi-bold);
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.announcement .items .item ul.metas {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.announcement .items .item ul.metas li {
+  margin-right: 10px;
+}
+.announcement .items .item ul.metas li i {
+  margin-right: 3px;
+  font-size: 13px;
+  color: var(--primary-color);
+}
+.announcement .items .item ul.metas li span {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.announcement .items .item .time {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+.announcement .items .item .time::before {
+  margin-right: 5px;
+  content: "\f017";
+  font-family: "Font Awesome 6 Free";
+  font-size: 13px;
+}
+
+.project-info {
+  padding: 75px 0;
+}
+.project-info img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.how-to {
+  padding: 75px 0;
+  background-color: #f9f9f9;
+  counter-reset: lorem;
+}
+.how-to .item h5 {
+  font-size: 20px;
+  font-weight: var(--semi-bold);
+}
+.how-to .item h5::before {
+  counter-increment: lorem;
+  content: counter(lorem) ". ";
+  color: var(--primary-color);
+  font-weight: var(--bold);
+}
+.how-to .item p {
+  color: var(--secondary-text-color);
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1399.98px) {
+}
+
+@media screen and (max-width: 1199.98px) {
+}
+@media screen and (max-width: 991.98px) {
+}
+@media screen and (max-width: 767.98px) {
+}
+@media screen and (max-width: 575.98px) {
+}
