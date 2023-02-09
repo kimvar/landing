@@ -251,13 +251,79 @@
           <div class="menu">
             <nav>
               <ul>
-                <li><a href="#">KVKK</a></li>
-                <li><a href="#">Çerez Politikası </a></li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#kvkkModal"
+                  >
+                    KVKK
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cookieModal"
+                  >
+                    Çerez Politikası
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
         </div>
       </div>
     </footer>
+
+    <div class="modal fade" id="kvkkModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">KVKK</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+              officiis odio pariatur architecto autem labore eaque nisi fugiat
+              ad quis esse, neque molestiae aliquid beatae. Ab assumenda unde
+              sed deserunt?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="cookieModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Çerez Politikası</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+              officiis odio pariatur architecto autem labore eaque nisi fugiat
+              ad quis esse, neque molestiae aliquid beatae. Ab assumenda unde
+              sed deserunt?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
