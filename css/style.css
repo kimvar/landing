@@ -206,23 +206,29 @@ p {
 
 .main {
   margin-top: 70px;
-  padding: 75px 0;
 }
 
+.announcement {
+  padding: 75px 0;
+}
 .announcement .items {
   box-shadow: var(--shadow-lg);
   border-radius: 10px;
   padding: 20px 30px;
   background-color: #fff;
 }
-
 .announcement .items .legend {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: var(--bold);
   font-size: 20px;
   color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
+.announcement .items .legend small {
+  color: var(--secondary-text-color);
+}
 .announcement .items .item {
   padding: 10px 0;
   border-bottom: 1px dashed #e8e8e8;
@@ -311,9 +317,8 @@ p {
 }
 
 .project-info {
-  padding: 75px 0;
+  padding: 25px 0 75px;
 }
-
 .project-info img {
   max-width: 100%;
   border-radius: 10px;
@@ -342,8 +347,31 @@ p {
   font-size: 15px;
 }
 
-.register {
-  padding: 50px 0;
+.footer .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e8e8e8;
+  padding: 25px 0;
+}
+.footer .copy {
+  color: var(--secondary-text-color);
+}
+.footer .menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .menu ul li {
+  margin-left: 15px;
+}
+.footer .menu ul li a {
+  color: var(--secondary-text-color);
+}
+.footer .menu ul li a:hover {
+  color: var(--primary-color);
 }
 
 @media screen and (max-width: 1399.98px) {
