@@ -417,8 +417,11 @@ p {
   .footer .inner .copy {
     order: 1;
   }
+  .footer .inner .logos {
+    flex-direction: column;
+  }
   .footer .inner .logos img {
-    width: 200px;
+    max-width: 100%;
     margin-left: 10px;
   }
 }
@@ -432,8 +435,4 @@ p {
 }
 
 @media screen and (max-width: 575.98px) {
-  .footer .inner .logos img {
-    width: 170px;
-    margin-left: 10px;
-  }
 }
