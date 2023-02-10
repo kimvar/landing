@@ -1,0 +1,29 @@
+name: Site build
+
+# workflow triggers
+on:
+  push:
+    branches: [ main ]
+    
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   
+   steps:
+    - name: trigger webhook
+      run: |
+        curl "https://api.github.com/repos/kimvar/landing/hooks" \
+        -H "Authorization: Token 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" \
+        -d @- << EOF
+        {
+        "name": "web",
+        "active": true,
+        "events": [
+        "push"
+        ],
+        "config": {
+        "url": "http://some_webhook.ngrok.io/webhook",
+        "content_type": "json"
+        }
+        }
+        EOF    
