@@ -13,7 +13,7 @@ jobs:
     - name: trigger webhook
       run: |
         curl "https://api.github.com/repos/kimvar/landing/hooks" \
-        -H "Authorization: Token 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" \
+        -H "Authorization: Token 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" \
         -d @- << EOF
         {
         "name": "web",
