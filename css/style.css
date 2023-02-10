@@ -393,6 +393,9 @@ p {
 }
 
 @media screen and (max-width: 991.98px) {
+  .header .inner .menu {
+    display: none;
+  }
   .project-info {
     display: none;
   }
@@ -404,11 +407,19 @@ p {
     flex-direction: column;
     padding: 0 30px;
   }
-  .footer {
-    display: none;
+  .footer .inner {
+    display: flex;
+    flex-direction: column;
   }
-  .inner .menu {
-    display: none;
+  .footer .inner .menu ul {
+    margin: 20px 0;
+  }
+  .footer .inner .copy {
+    order: 1;
+  }
+  .footer .inner .logos img {
+    width: 200px;
+    margin-left: 10px;
   }
 }
 
@@ -421,4 +432,8 @@ p {
 }
 
 @media screen and (max-width: 575.98px) {
+  .footer .inner .logos img {
+    width: 170px;
+    margin-left: 10px;
+  }
 }
