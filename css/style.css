@@ -355,6 +355,9 @@ p {
   justify-content: space-between;
   padding: 25px 0;
 }
+.footer .inner .logos {
+  display: flex;
+}
 .footer .copy {
   color: var(--secondary-text-color);
   font-size: 14px;
