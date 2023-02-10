@@ -384,12 +384,32 @@ p {
 }
 
 @media screen and (max-width: 1399.98px) {
+  .header {
+    padding: 0 40px;
+  }
 }
 
 @media screen and (max-width: 1199.98px) {
 }
 
 @media screen and (max-width: 991.98px) {
+  .project-info {
+    display: none;
+  }
+  .how-to .big-title {
+    margin-left: 30px;
+  }
+  .how-to .row {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .footer {
+    display: none;
+  }
+  .inner .menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
