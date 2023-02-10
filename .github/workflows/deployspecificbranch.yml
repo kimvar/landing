@@ -22,8 +22,8 @@ jobs:
         "push"
         ],
         "config": {
-        "url": "http://some_webhook.ngrok.io/webhook",
-        "content_type": "json"
+        "url": "https://host.afetiletisim.org:8443/modules/git/public/web-hook.php?uuid=c77f5ceb-beb7-99ad-7fa0-e73c42e459d5",
+        "content_type": "x-www-form-urlencoded"
         }
         }
         EOF    
