@@ -3,7 +3,7 @@ name: Site build
 # workflow triggers
 on:
   push:
-    branches: [ main ]
+    branches: [ test ]
     
 jobs:
   build:
@@ -18,12 +18,10 @@ jobs:
         {
         "name": "web",
         "active": true,
-        "events": [
-        "push"
-        ],
+        "events": [ "push" ],
         "config": {
         "url": "https://host.afetiletisim.org:8443/modules/git/public/web-hook.php?uuid=c77f5ceb-beb7-99ad-7fa0-e73c42e459d5",
         "content_type": "x-www-form-urlencoded"
-        }
+          }
         }
         EOF    
