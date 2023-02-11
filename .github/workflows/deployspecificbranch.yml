@@ -1,27 +1,24 @@
-name: Site build
+name: install ssh and deploy
 
-# workflow triggers
 on:
   push:
     branches: [ test ]
-    
+  pull_request:
+    branches: [ test ]
+
 jobs:
-  build:
-   runs-on: ubuntu-latest
-   
-   steps:
-    - name: trigger webhook
-      run: |
-        curl "https://api.github.com/repos/kimvar/landing/hooks" \
-        -H "Authorization: Token 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" \
-        -d @- << EOF
-        {
-        "name": "web",
-        "active": true,
-        "events": [ "push" ],
-        "config": {
-        "url": "https://host.afetiletisim.org:8443/modules/git/public/web-hook.php?uuid=c77f5ceb-beb7-99ad-7fa0-e73c42e459d5",
-        "content_type": "x-www-form-urlencoded"
-          }
-        }
-        EOF    
+
+  ssh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: unnecessary
+        
+      - name: add key to known_hosts
+        run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+      - name: Pull image at
+        run: ssh -p ${{ secrets.SSH_PORT}} root@${{ secrets.SSH_HOST }} "plesk ext git --deploy -domain test.afetiletisim.org -name landing.git"
