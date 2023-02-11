@@ -2,10 +2,8 @@ name: install ssh and deploy to prod env
 
 on:
   push:
-    branches: [ prod ]
-  pull_request:
-    branches: [ prod ]
-
+    branches: [ main ]
+    
 jobs:
 
   ssh:
