@@ -355,9 +355,7 @@ p {
   justify-content: space-between;
   padding: 25px 0;
 }
-.footer .inner .logos {
-  display: flex;
-}
+
 .footer .copy {
   color: var(--secondary-text-color);
   font-size: 14px;
@@ -384,41 +382,30 @@ p {
 }
 
 @media screen and (max-width: 1399.98px) {
-  .header {
-    padding: 0 40px;
-  }
 }
 
 @media screen and (max-width: 1199.98px) {
 }
 
 @media screen and (max-width: 991.98px) {
-  .project-info {
-    display: none;
-  }
-  .how-to .big-title {
-    margin-left: 30px;
-  }
-  .how-to .row {
-    display: flex;
-    flex-direction: column;
-    padding: 0 30px;
-  }
-  .footer {
-    display: none;
-  }
-  .inner .menu {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 767.98px) {
-  .login a span,
-  i {
-    display: inline-block;
-    font-size: 14px;
+  .footer .inner {
+    flex-direction: column;
+  }
+  .footer .inner .menu {
+    margin: 10px 0 0 25px;
   }
 }
 
 @media screen and (max-width: 575.98px) {
+  body {
+    padding: 0 15px;
+  }
+  .footer .inner .logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
