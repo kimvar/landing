@@ -1,4 +1,4 @@
-name: install ssh and deploy
+name: install ssh and deploy to test env 
 
 on:
   push:
