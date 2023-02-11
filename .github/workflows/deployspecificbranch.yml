@@ -21,4 +21,4 @@ jobs:
       - name: add key to known_hosts
         run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
       - name: deploy with plesk integration
-        run: ssh -p ${{ secrets.SSH_PORT}} root@${{ secrets.SSH_HOST }} "plesk ext git --deploy -domain test.afetiletisim.org -name landing.git"
+        run: ssh -p ${{ secrets.SSH_PORT}} root@${{ secrets.SSH_HOST }} "plesk ext git --fetch -domain test.afetiletisim.org -name landing.git"
