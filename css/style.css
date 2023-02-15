@@ -408,4 +408,7 @@ p {
     flex-direction: column;
     justify-content: center;
   }
+  .footer .inner .menu {
+    margin-right: 40px;
+  }
 }
